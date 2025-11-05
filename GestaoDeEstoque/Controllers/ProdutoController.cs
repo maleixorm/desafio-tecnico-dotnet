@@ -46,12 +46,13 @@ namespace GestaoDeEstoque.Controllers
             if (produto.Nome == null) return BadRequest(new { Erro = "O nome do produto não pode estar vazio!" });
 
             produtoBanco.Nome = produto.Nome;
+            produtoBanco.Descricao = produto.Descricao;
             produtoBanco.Preco = produto.Preco;
             produtoBanco.Quantidade = produto.Quantidade;
 
             _context.Produtos.Update(produtoBanco);
             _context.SaveChanges();
-            
+
             return Ok();
         }
 
