@@ -17,6 +17,7 @@ namespace GestaoDeEstoque.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Preco = table.Column<float>(type: "real", nullable: false),
                     Quantidade = table.Column<int>(type: "int", nullable: false)
                 },

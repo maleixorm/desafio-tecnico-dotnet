@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestaoDeEstoque.Migrations
 {
     [DbContext(typeof(OrganizadorContext))]
-    [Migration("20251104143252_CriacaoTabelaProdutos")]
+    [Migration("20251104195705_CriacaoTabelaProdutos")]
     partial class CriacaoTabelaProdutos
     {
         /// <inheritdoc />
@@ -31,6 +31,9 @@ namespace GestaoDeEstoque.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");

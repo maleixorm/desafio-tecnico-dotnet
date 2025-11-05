@@ -29,6 +29,9 @@ namespace GestaoDeEstoque.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
